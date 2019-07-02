@@ -30,35 +30,31 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   height: 95vh;
   position: relative; }
-
-.Header__Logo-box {
-  left: 4rem;
-  position: absolute;
-  top: 4rem; }
-
-.Header__Logo {
-  height: 3.5rem; }
+  .Header__Logo-box {
+    left: 4rem;
+    position: absolute;
+    top: 4rem; }
+  .Header__Logo {
+    height: 3.5rem; }
 
 .Heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden; }
-
-.Heading-primary--main {
-  animation-timing-function: ease-out;
-  animation: moveInLeft 2s;
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem; }
-
-.Heading-primary--sub {
-  animation: moveInRight 2s;
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.74rem;
-  margin-bottom: 6rem; }
+  .Heading-primary--main {
+    animation-timing-function: ease-out;
+    animation: moveInLeft 2s;
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem; }
+  .Heading-primary--sub {
+    animation: moveInRight 2s;
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.74rem;
+    margin-bottom: 6rem; }
 
 .Button {
   border-radius: 10rem;
@@ -68,48 +64,39 @@ body {
   /* Has to be in the initial state */
   position: relative;
   animation: moveInBottom 2s ease-out 0.75s; }
-
-.Button:link,
-.Button:visited {
-  text-transform: uppercase;
-  text-decoration: none; }
-
-.Button:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.Button:active {
-  /* When button is clicked */
-  transform: translateY(-0.1rem);
-  /* This is apply hover initial state, it not uses -3px */
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
-
-.Button--white {
-  background: #fff;
-  color: #777; }
-
-.Button::after {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s; }
-
-.Button--white::after {
-  background: #fff; }
-
-.Button:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
-.Button--animated {
-  transition: transform 0.4s;
-  animation-fill-mode: backwards; }
+  .Button:link, .Button:visited {
+    text-transform: uppercase;
+    text-decoration: none; }
+  .Button:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .Button:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .Button:active {
+    /* When button is clicked */
+    transform: translateY(-0.1rem);
+    /* This is apply hover initial state, it not uses -3px */
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+  .Button::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s; }
+  .Button--white {
+    background: #fff;
+    color: #777; }
+    .Button--white::after {
+      background: #fff; }
+  .Button--animated {
+    transition: transform 0.4s;
+    animation-fill-mode: backwards; }
 
 @keyframes moveInLeft {
   0% {
