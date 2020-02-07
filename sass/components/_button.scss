@@ -1,0 +1,56 @@
+.Button {
+  border-radius: 10rem;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  transition: transform 0.2s; /* Has to be in the initial state */
+  position: relative;
+  animation: moveInBottom 2s ease-out 0.75s;
+
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active { /* When button is clicked */
+    transform: translateY(-0.1rem); /* This is apply hover initial state, it not uses -3px */
+    box-shadow: 0 1rem 1rem rgba($black, 0.2);
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--white {
+    background: $white;
+    color: $grey-dark;
+
+    &::after {
+      background: $white;
+    }
+  }
+
+  &--animated {
+    transition: transform 0.4s;
+    animation-fill-mode: backwards;
+  }
+}
