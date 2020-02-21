@@ -36,3 +36,27 @@ body {
     margin-bottom: 6rem;
   }
 }
+
+.heading-secondary {
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, $primary-light, $primary-dark);
+  color: transparent;
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

@@ -54,3 +54,25 @@
     animation-fill-mode: backwards;
   }
 }
+
+.btn-text {
+  border-bottom: 1px solid $primary;
+  color: $primary;
+  display: inline-block;
+  font-size: $default-font-size;
+  padding: 3px;
+  position: relative;
+
+  &:link, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: $primary;
+    color: $white;
+  }
+
+  &:active {
+
+  }
+}

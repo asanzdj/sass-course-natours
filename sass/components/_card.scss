@@ -1,0 +1,113 @@
+.card {
+  -moz-perspective: 150rem;
+  perspective: 150rem;
+  position: relative;
+  height: 52rem;
+
+  &__side {
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($black, .15);
+    font-size: 2rem;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: all .8s ease;
+    width: 100%;
+
+    &--front {
+      background: $white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-primary {
+        background: linear-gradient(to right bottom, $primary-light, $primary-dark);
+      }
+      &-secondary {
+        background: linear-gradient(to right bottom, $secondary-light, $secondary-dark);
+      }
+      &-tertiary {
+        background: linear-gradient(to right bottom, $tertiary-light, $tertiary-dark);
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__picture {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-blend-mode: screen;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    height: 23rem;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $secondary-light, $secondary-dark), url("../../img/nat-5.jpg");
+    }
+    &--2 {
+      background-image: linear-gradient(to right bottom, $primary-light, $primary-dark), url("../../img/nat-6.jpg");
+    }
+    &--3 {
+      background-image: linear-gradient(to right bottom, $tertiary-light, $tertiary-dark), url("../../img/nat-7.jpg");
+    }
+  }
+
+  &__heading {
+    color: $white;
+    font-size: 2.8rem;
+    font-weight: 300;
+    position: absolute;
+    right: 2rem;
+    text-align: right;
+    text-transform: uppercase;
+    top: 12rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 1rem 1.5rem;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, rgba($secondary-light, .85), rgba($secondary-dark, .85));
+    }
+    &--2 {
+      background-image: linear-gradient(to right bottom, rgba($primary-light, .85), rgba($primary-dark, .85));
+    }
+    &--3 {
+      background-image: linear-gradient(to right bottom, rgba($tertiary-light, .85), rgba($tertiary-dark, .85));
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      margin: 0 auto;
+      padding-left: 0;
+      width: 80%;
+
+      li {
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $grey-light-2;
+        }
+      }
+    }
+  }
+}
