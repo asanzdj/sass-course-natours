@@ -49,6 +49,11 @@
     }
   }
 
+  &--green {
+    background: $primary;
+    color: $white;
+  }
+
   &--animated {
     transition: transform 0.4s;
     animation-fill-mode: backwards;
